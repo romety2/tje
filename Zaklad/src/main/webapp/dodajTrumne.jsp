@@ -7,22 +7,18 @@
 <title>Dodaj trumnę</title>
 </head>
 <body>
-<jsp:useBean id="trumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
-
-<jsp:setProperty name="trumna" property="*" />
 
 <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+<jsp:useBean id="trumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
 
-<%
-    przechowaj.wstawTrumne(trumna);
-%>
+<form action="komunikatDodaniaTrumna.jsp">
 
-<p>Dodaj trumnę: </p>
-<p>Rodzaj: ${trumna.rodzaj} </p>
-<p>Cena: <jsp:getProperty name="trumna" property="cena"></jsp:getProperty></p>
-<p>Ilość: <jsp:getProperty name="trumna" property="ilosc"></jsp:getProperty></p>
-<p>
-  <a href="wyswietlTrumny.jsp">Pokaż trumny</a>
-</p>
+  Rodzaj :<input type="text" name="rodzaj" value="${trumna.rodzaj}" /><br />
+  Cena :<input type="text"  name="cena" value="${trumna.cena}" /><br />
+  Ilość :<input type="text"  name="ilosc" value="${trumna.ilosc}" /><br />
+  <input type="submit" value=" OK ">
+  
+</form>
+
 </body>
 </html>

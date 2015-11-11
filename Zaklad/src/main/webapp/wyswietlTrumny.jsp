@@ -32,7 +32,7 @@
     %>
 </table>
 
-<form action="dodajDaneTrumny.jsp">
+<form action="dodajTrumne.jsp">
 
     <input type="submit" value=" Dodaj ">
 

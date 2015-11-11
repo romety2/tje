@@ -7,22 +7,19 @@
 <title>Dodaj pogrzeb</title>
 </head>
 <body>
-<jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
-
-<jsp:setProperty name="pogrzeb" property="*" />
 
 <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+<jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
 
-<%
-    przechowaj.wstawPogrzeb(pogrzeb);
-%>
+<form action="komunikatDodaniaPogrzeb.jsp">
 
-<p>Dodaj pogrzeb: </p>
-<p>Data: ${pogrzeb.data} </p>
-<p>Cena: <jsp:getProperty name="pogrzeb" property="cena"></jsp:getProperty></p>
-<p>Opis: ${pogrzeb.opis} </p>
-<p>
-  <a href="wyswietlPogrzeby.jsp">Pokaż pogrzeby</a>
-</p>
+  Data :<input type="text" name="data" value="${pogrzeb.data}" /><br />
+  Cena :<input type="text" name="cena" value="${pogrzeb.cena}" /><br />
+  Opis :<input type="text" name="opis" value="${pogrzeb.opis}" /><br />
+  <input type="submit" value=" OK ">
+  
+</form>
+
+
 </body>
 </html>

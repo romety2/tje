@@ -32,7 +32,7 @@
 %>
 </table>
 
-<form action="dodajDanePogrzebu.jsp">
+<form action="dodajPogrzeb.jsp">
 
     <input type="submit" value=" Dodaj ">
 
