@@ -14,8 +14,9 @@
                 text-decoration: underline; font-family: "Arial"; line-height: 25px}
         th 	    {border-width: 1px; padding: 2px; border-style: solid; border-color: #000000; background: #DCDCDC;
                 font-family: "Calibri"}
-        td 	    {border-width: 1px;padding: 2px;border-style: solid;border-color: #000000; background: #FFFFFF}
+        td 	    {border-width: 1px; padding: 2px; border-style: solid; border-color: #000000; background: #FFFFFF}
         .przycisk   {text-align: center}
+        input   {font-size: 20px}
     </style>
 </head>
 <body>

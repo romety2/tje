@@ -1,24 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Dodaj trumnę</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dodaj trumnę</title>
+    <style rel="stylesheet" type="text/css">
+        body 	{background: url('czaszki.jpg')}
+        h1 	    {text-align: center; color: #000033; font-size: 30px; font-style: italic;
+            font-family: "Calibri"; line-height: 25px}
+        label   {font-size: 20px; font-family: "Calibri"}
+        input   {font-size: 20px}
+        .edytor     {text-align: center}
+        .przycisk   {text-align: center}
+    </style>
 </head>
 <body>
 
-<jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
-<jsp:useBean id="trumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
+    <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+    <jsp:useBean id="trumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
+    <p class="link"> <a href="index.jsp">Strona główna</a> </p>
+    <p class="link"> <a href="wyswietlTrumny.jsp">Wróć</a> </p>
 
-<form action="komunikatDodaniaTrumna.jsp">
-
-  Rodzaj :<input type="text" name="rodzaj" value="${trumna.rodzaj}" /><br />
-  Cena :<input type="text"  name="cena" value="${trumna.cena}" /><br />
-  Ilość :<input type="text"  name="ilosc" value="${trumna.ilosc}" /><br />
-  <input type="submit" value=" OK ">
-  
-</form>
+    <h1>Dodaj trumnę</h1>
+    <form action="komunikatDodaniaTrumna.jsp">
+          <p class="edytor"><label>Rodzaj: &nbsp;</label><input type="text" name="rodzaj" value="${trumna.rodzaj}" />
+          <br/>
+          <label>Cena: &nbsp;&nbsp;&nbsp;</label><input type="text"  name="cena" value="${trumna.cena}" /><br/>
+          <label>Ilość: &nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"  name="ilosc" value="${trumna.ilosc}" /><br/>
+          </p>
+          <p class="przycisk"><input type="submit" value=" OK "></p>
+    </form>
 
 </body>
 </html>
