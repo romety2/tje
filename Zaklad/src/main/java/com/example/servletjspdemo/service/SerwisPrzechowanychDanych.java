@@ -11,12 +11,12 @@ public class SerwisPrzechowanychDanych {
 	private List<Pogrzeb> ListaPogrzebow = new ArrayList<Pogrzeb>();
 	private List<Trumna> ListaTrumien = new ArrayList<Trumna>();
 	
-	public void dodajPogrzeb(Pogrzeb pogrzeb){
+	public void wstawPogrzeb(Pogrzeb pogrzeb){
 		Pogrzeb nowyPogrzeb= new Pogrzeb(pogrzeb.getData(), pogrzeb.getCena(), pogrzeb.getOpis());
 		ListaPogrzebow.add(nowyPogrzeb);
 	}
 
-	public void dodajTrumne(Trumna trumna){
+	public void wstawTrumne(Trumna trumna){
 		Trumna nowaTrumna = new Trumna(trumna.getRodzaj(), trumna.getCena(), trumna.getIlosc());
 		ListaTrumien.add(nowaTrumna);
 	}

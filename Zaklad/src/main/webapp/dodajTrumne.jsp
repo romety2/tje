@@ -14,7 +14,7 @@
 <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 
 <%
-    przechowaj.dodajTrumne(trumna);
+    przechowaj.wstawTrumne(trumna);
 %>
 
 <p>Dodaj trumnę: </p>
@@ -22,7 +22,7 @@
 <p>Cena: <jsp:getProperty name="trumna" property="cena"></jsp:getProperty></p>
 <p>Ilość: <jsp:getProperty name="trumna" property="ilosc"></jsp:getProperty></p>
 <p>
-  <a href="pokazTrumny.jsp">Pokaż trumny</a>
+  <a href="wyswietlTrumny.jsp">Pokaż trumny</a>
 </p>
 </body>
 </html>

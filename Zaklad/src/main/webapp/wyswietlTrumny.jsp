@@ -9,16 +9,34 @@
 </head>
 <body>
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
-<%
-  for (Trumna trumna : storage.dajWszystkieTrumny()) {
-	  out.println("<p>Rodzaj: " + trumna.getRodzaj() + "; Cena: " + trumna.getCena()
-              + "; Ilosc: " + trumna.getIlosc() + "</p>");
-  }
-%>
-<p>
-  <a href="dodajDanePogrzebu.jsp">Dodaj trumnę</a>
-</p>
+<p> <a href="index.jsp">Strona główna</a> </p>
+
+<h1>Trumny</h1>
+<table>
+    <tr>
+        <th>Rodzaj</th>
+        <th>Cena</th>
+        <th>Ilość</th>
+        <th></th>
+    </tr>
+
+    <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+    <%
+        for (Trumna trumna : przechowaj.dajWszystkieTrumny()) {
+            out.println("<tr>");
+            out.println("<td>" + trumna.getRodzaj()+"</td>");
+            out.println("<td>" + trumna.getCena()+"</td>");
+            out.println("<td>" + trumna.getIlosc()+"</td>");
+            out.println("</tr>");
+        }
+    %>
+</table>
+
+<form action="dodajDaneTrumny.jsp">
+
+    <input type="submit" value=" Dodaj ">
+
+</form>
 
 </body>
 </html>

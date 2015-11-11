@@ -23,11 +23,11 @@ public class FormServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<html><body><h2>Prosty serwlet</h2>" +
 				"<form action='data'>" +
-				"Imiê: <input type='text' name='imie' /> <br />" +
-				"<input type='checkbox' name='hobby' value='rower'>Lubiê jeŸdziæ rowerem<br />" +
-				"<input type='checkbox' name='hobby' value='tv'>Lubiê ogl¹daæ TV<br />" +
-				"<input type='checkbox' name='hobby' value='piwo'>Lubiê piæ piwo<br />" +
-				"<input type='checkbox' name='hobby' value='ksi¹¿ki'>Lubiê czytaæ ksi¹¿ki<br />" +
+				"Imie: <input type='text' name='imie' /> <br />" +
+				"<input type='checkbox' name='hobby' value='rower'>Lubie jezdzic rowerem<br />" +
+				"<input type='checkbox' name='hobby' value='tv'>Lubie ogladac TV<br />" +
+				"<input type='checkbox' name='hobby' value='piwo'>Lubie pic piwo<br />" +
+				"<input type='checkbox' name='hobby' value='ksiazki'>Lubie czytac ksiazki<br />" +
 				"<input type='submit' value=' OK ' />" +
 				"</form>" +
 				"</body></html>");

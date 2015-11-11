@@ -9,16 +9,34 @@
 </head>
 <body>
 
+<p> <a href="index.jsp">Strona główna</a> </p>
+
+<h1>Pogrzeby</h1>
+<table>
+    <tr>
+        <th>Data</th>
+        <th>Cena</th>
+        <th>Opis</th>
+        <th></th>
+    </tr>
+
 <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 <%
-  for (Pogrzeb pogrzeb : przechowaj.dajWszystkiePogrzeby()) {
-	  out.println("<p>Data: " + pogrzeb.getData() + "; Cena: " + pogrzeb.getCena()
-              +"; Opis: " + pogrzeb.getOpis() + "</p>");
-  }
+    for (Pogrzeb pogrzeb : przechowaj.dajWszystkiePogrzeby()) {
+        out.println("<tr>");
+        out.println("<td>" + pogrzeb.getData()+"</td>");
+        out.println("<td>" + pogrzeb.getCena()+"</td>");
+        out.println("<td>" + pogrzeb.getOpis()+"</td>");
+        out.println("</tr>");
+    }
 %>
-<p>
-  <a href="dodajDanePogrzebu.jsp">Dodaj pogrzeb</a>
-</p>
+</table>
+
+<form action="dodajDanePogrzebu.jsp">
+
+    <input type="submit" value=" Dodaj ">
+
+</form>
 
 </body>
 </html>
