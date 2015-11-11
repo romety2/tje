@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
+<jsp:useBean id="storage" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 <jsp:useBean id="person" class="com.example.servletjspdemo.domain.Person" scope="session" />
 
 <form action="addPerson.jsp">

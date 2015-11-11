@@ -11,7 +11,7 @@
 
 <jsp:setProperty name="person" property="*" /> 
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
+<jsp:useBean id="storage" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 
 <% 
   storage.add(person);

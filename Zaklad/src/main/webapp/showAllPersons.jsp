@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<jsp:useBean id="storage" class="com.example.servletjspdemo.service.StorageService" scope="application" />
+<jsp:useBean id="storage" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 <%
   for (Person person : storage.getAllPersons()) {
 	  out.println("<p>First name: " + person.getFirstName() + "; Year of birth: " + person.getYob() + "</p>");

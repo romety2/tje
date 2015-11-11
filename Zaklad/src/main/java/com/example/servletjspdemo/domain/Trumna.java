@@ -22,10 +22,10 @@ public class Trumna {
         public void setRodzaj(String rodzaj) {
             this.rodzaj = rodzaj;
         }
-        public double getKolor() {
+        public double getCena() {
             return cena;
         }
-        public void setKolor(double cena) {
+        public void setCena(double cena) {
             this.cena = cena;
         }
         public int getIlosc() {
