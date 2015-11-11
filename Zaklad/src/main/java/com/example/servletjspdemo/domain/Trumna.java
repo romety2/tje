@@ -3,7 +3,7 @@ package com.example.servletjspdemo.domain;
 public class Trumna {
 
         private int id;
-        private String rodzaj = "blablabla";
+        private String rodzaj = "";
         private double cena = 0.0;
         private int ilosc = 0;
 

@@ -5,7 +5,7 @@ public class Pogrzeb {
         private int id;
         private String data = "0000-00-00";
         private double cena = 0.0;
-        private String opis = "blablabla";
+        private String opis = "";
 
 
         public Pogrzeb() {

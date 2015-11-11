@@ -12,7 +12,6 @@
                     font-family: "Calibri"; line-height: 25px}
             h3 	    {text-align: center; color: #003333; font-size: 20px; font-style: italic;
                     font-family: "Times New Roman"; line-height: 15px}
-            caption 	{padding: 5px;font-size: 20px;font-weight:bold;}
         </style>
     </head>
     <body>
