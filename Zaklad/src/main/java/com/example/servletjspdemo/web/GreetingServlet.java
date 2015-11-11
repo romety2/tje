@@ -21,7 +21,7 @@ public class GreetingServlet extends HttpServlet {
 		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Hello World! Today is " + new java.util.Date() + "</h2></body></html>");
+		out.println("<html><body><h2>Witaj œwiecie! Dzisiaj jest: " + new java.util.Date() + "</h2></body></html>");
 		out.close();
 	}
 

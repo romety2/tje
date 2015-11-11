@@ -26,9 +26,9 @@ public class DataServlet extends HttpServlet {
 		for (String hobby : request.getParameterValues("hobby")) {
 			selectedHobby += hobby + " ";
 		}
-		out.println("<html><body><h2>Your data</h2>" +
-				"<p>First name: " + request.getParameter("firstName") + "<br />" +
-				"<p>Your hobby: " + selectedHobby + "<br />" +
+		out.println("<html><body><h2>Twoje dane</h2>" +
+				"<p>Imiê: " + request.getParameter("firstName") + "<br />" +
+				"<p>Hobby: " + selectedHobby + "<br />" +
 				"</body></html>");
 		out.close();
 	}
