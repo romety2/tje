@@ -12,7 +12,7 @@ public class SerwisPrzechowanychDanych {
 	private List<Trumna> ListaTrumien = new ArrayList<Trumna>();
 	
 	public void dodajPogrzeb(Pogrzeb pogrzeb){
-		Pogrzeb nowyPogrzeb= new Pogrzeb(pogrzeb.getData(), pogrzeb.getOpis());
+		Pogrzeb nowyPogrzeb= new Pogrzeb(pogrzeb.getData(), pogrzeb.getCena(), pogrzeb.getOpis());
 		ListaPogrzebow.add(nowyPogrzeb);
 	}
 

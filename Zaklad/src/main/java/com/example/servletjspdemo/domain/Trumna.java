@@ -3,9 +3,9 @@ package com.example.servletjspdemo.domain;
 public class Trumna {
 
         private int id;
-        private String rodzaj;
-        private double cena;
-        private int ilosc;
+        private String rodzaj = "blablabla";
+        private double cena = 0.0;
+        private int ilosc = 0;
 
         public Trumna() {
         }
