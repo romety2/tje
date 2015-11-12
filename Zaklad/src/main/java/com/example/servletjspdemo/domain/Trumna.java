@@ -2,7 +2,7 @@ package com.example.servletjspdemo.domain;
 
 public class Trumna {
 
-        private int id;
+        private long id;
         private String rodzaj = "";
         private double cena = 0.0;
         private int ilosc = 0;
@@ -16,6 +16,12 @@ public class Trumna {
             this.ilosc = ilosc;
         }
 
+        public long getId() {
+        return id;
+    }
+        public void setId(long id) {
+        this.id = id;
+    }
         public String getRodzaj() {
                 return rodzaj;
         }

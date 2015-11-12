@@ -2,7 +2,7 @@ package com.example.servletjspdemo.domain;
 
 public class Pogrzeb {
 
-        private int id;
+        private long id;
         private String data = "0000-00-00";
         private double cena = 0.0;
         private String opis = "";
@@ -18,6 +18,12 @@ public class Pogrzeb {
             this.opis = opis;
         }
 
+        public long getId() {
+        return id;
+    }
+        public void setId(long id) {
+        this.id = id;
+    }
         public String getData() {
             return data;
         }

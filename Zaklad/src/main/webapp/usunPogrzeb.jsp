@@ -17,6 +17,8 @@
 </head>
 <body>
 
+    <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+    <jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
     <p class="link"> <a href="index.jsp">Strona główna</a> </p>
     <p class="link"> <a href="wyswietlPogrzeby.jsp">Wróć</a> </p>
 

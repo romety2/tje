@@ -8,7 +8,7 @@
     <style rel="stylesheet" type="text/css">
         body 	{background: url('czaszki.jpg')}
         h1 	    {text-align: center; color: #000033; font-size: 30px; font-style: italic;
-                font-family: "Calibri"; line-height: 25px}
+            font-family: "Calibri"; line-height: 25px}
         label   {font-size: 20px; font-family: "Calibri"}
         input   {font-size: 20px}
         .edytor     {text-align: center}
@@ -17,6 +17,8 @@
 </head>
 <body>
 
+    <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+    <jsp:useBean id="trumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
     <p class="link"> <a href="index.jsp">Strona główna</a> </p>
     <p class="link"> <a href="wyswietlTrumny.jsp">Wróć</a> </p>
 

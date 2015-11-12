@@ -15,8 +15,10 @@
         th 	    {border-width: 1px; padding: 2px; border-style: solid; border-color: #000000; background: #DCDCDC;
             font-family: "Calibri"}
         td 	    {border-width: 1px; padding: 2px; border-style: solid; border-color: #000000; background: #FFFFFF}
-        .przycisk   {text-align: center}
         input   {font-size: 20px}
+        .przycisk   {text-align: center}
+        .ukryty     {visibility: hidden; width: 1px;  height: 1px; font-size: 1px; margin: 0px ; padding: 0px}
+        .tabelka    {font-size: 10px; display:inline-block;}
     </style>
 </head>
 <body>
@@ -39,7 +41,16 @@
                 out.println("<td>" + trumna.getRodzaj()+"</td>");
                 out.println("<td>" + trumna.getCena()+"</td>");
                 out.println("<td>" + trumna.getIlosc()+"</td>");
-                out.println("<td>"+"</td>");
+                out.println("<td>" +
+                                "<form class=\"tabelka\" action=\"edytujPogrzeb.jsp\">" +
+                                    "<input class=\"tabelka\" type=\"submit\" value=\"Edytuj\">" +
+                                    "<input class=\"ukryty\" type=\"text\" name=\"id\" value=\""+trumna.getId()+"\">" +
+                                "</form>" +
+                                "<form class=\"tabelka\" action=\"usunPogrzeb.jsp\">" +
+                                    "<input class=\"tabelka\" type=\"submit\" value=\"Usuń\">" +
+                                    "<input class=\"ukryty\" type=\"text\" name=\"id\" value=\""+trumna.getId()+"\">" +
+                                "</form>" +
+                            "</td>");
                 out.println("</tr>");
             }
         %>
