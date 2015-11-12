@@ -24,7 +24,7 @@
 
     <h1>Dodaj pogrzeb</h1>
 
-    <form action="komunikatDodaniaPogrzeb.jsp">
+    <form action="komunikatDodajPogrzeb.jsp">
 
       <p class="edytor"><label>Data: &nbsp;</label><input type="text" name="data" value="${pogrzeb.data}" /><br />
       <label>Cena: </label><input type="text" name="cena" value="${pogrzeb.cena}" /><br />
