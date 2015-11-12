@@ -26,9 +26,10 @@
 
     <form action="komunikatDodajPogrzeb.jsp">
 
-      <p class="edytor"><label>Data: &nbsp;</label><input type="text" name="data" value="${pogrzeb.data}" /><br />
-      <label>Cena: </label><input type="text" name="cena" value="${pogrzeb.cena}" /><br />
-      <label>Opis: &nbsp;</label><input type="text" name="opis" value="${pogrzeb.opis}" /><br />
+      <p class="edytor">
+          <label>Data: &nbsp;</label><input type="text" name="data" value="rrrr-mm-dd" /><br />
+          <label>Cena: </label><input type="text" name="cena" value="0.0" /><br />
+          <label>Opis: &nbsp;</label><input type="text" name="opis" value="" /><br />
       <p class="przycisk"><input type="submit" value=" OK "></p>
 
     </form>

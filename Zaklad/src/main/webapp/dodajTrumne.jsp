@@ -24,10 +24,10 @@
 
     <h1>Dodaj trumnę</h1>
     <form action="komunikatDodajTrumna.jsp">
-          <p class="edytor"><label>Rodzaj: &nbsp;</label><input type="text" name="rodzaj" value="${trumna.rodzaj}" />
+          <p class="edytor"><label>Rodzaj: &nbsp;</label><input type="text" name="rodzaj" value="" />
           <br/>
-          <label>Cena: &nbsp;&nbsp;&nbsp;</label><input type="text"  name="cena" value="${trumna.cena}" /><br/>
-          <label>Ilość: &nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"  name="ilosc" value="${trumna.ilosc}" /><br/>
+          <label>Cena: &nbsp;&nbsp;&nbsp;</label><input type="text"  name="cena" value="0.0" /><br/>
+          <label>Ilość: &nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"  name="ilosc" value="0" /><br/>
           </p>
           <p class="przycisk"><input type="submit" value=" OK "></p>
     </form>

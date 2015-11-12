@@ -6,6 +6,27 @@
 
 <c:catch var="wyjatek">
     <jsp:setProperty name="pogrzeb" property="*" />
+    <%
+        String data = pogrzeb.getData();
+        int rok = Integer.parseInt(data.substring(0, 4));
+        int miesiac = Integer.parseInt(data.substring(5, 7));
+        int dzien = Integer.parseInt(data.substring(8));
+        if (data.length() != 10)
+            throw new Exception();
+        else if (data.charAt(4) != '-' || data.charAt(7) != '-')
+            throw new Exception();
+        else if (((dzien > 0) && (miesiac > 0) && (rok > 0)) &&
+        ((((miesiac == 1) || (miesiac == 3) || (miesiac == 5) || (miesiac == 7) || (miesiac == 8) ||
+        (miesiac == 10) || (miesiac == 12)) && (dzien <= 31)) ||
+        (((miesiac == 4) || (miesiac == 6) || (miesiac == 9) || (miesiac == 11)) && (dzien <= 30))
+        || ((((rok % 4 == 0) && (rok % 100 != 0)) || (rok % 400 == 0)) &&
+        (miesiac == 2) && (dzien <= 29)) || ((miesiac == 2) && (dzien <= 28))))
+        {
+
+        }
+        else
+            throw new Exception();
+    %>
 </c:catch>
 
 <c:if test="${empty wyjatek}">
