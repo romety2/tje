@@ -26,7 +26,27 @@ public class SerwisPrzechowanychDanych {
 		listaTrumien.add(nowaTrumna);
 		idTrumny++;
 	}
-	
+
+	public void usunPogrzeb(Pogrzeb pogrzeb){
+		int i = 0;
+		for (Pogrzeb pomPogrz : dajWszystkiePogrzeby()) {
+			if(pomPogrz.getId() == pogrzeb.getId())
+				break;
+			i++;
+		}
+		listaPogrzebow.remove(i);
+	}
+
+	public void usunTrumne(Trumna trumna){
+		int i = 0;
+		for (Trumna pomTrumna : dajWszystkieTrumny()) {
+			if(pomTrumna.getId() == trumna.getId())
+				break;
+			i++;
+		}
+		listaTrumien.remove(i);
+	}
+
 	public List<Pogrzeb> dajWszystkiePogrzeby(){
 		return listaPogrzebow;
 	}

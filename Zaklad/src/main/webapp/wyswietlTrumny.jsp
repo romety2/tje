@@ -42,11 +42,11 @@
                 out.println("<td>" + trumna.getCena()+"</td>");
                 out.println("<td>" + trumna.getIlosc()+"</td>");
                 out.println("<td>" +
-                                "<form class=\"tabelka\" action=\"edytujPogrzeb.jsp\">" +
+                                "<form class=\"tabelka\" action=\"edytujTrumne.jsp\">" +
                                     "<input class=\"tabelka\" type=\"submit\" value=\"Edytuj\">" +
                                     "<input class=\"ukryty\" type=\"text\" name=\"id\" value=\""+trumna.getId()+"\">" +
                                 "</form>" +
-                                "<form class=\"tabelka\" action=\"usunPogrzeb.jsp\">" +
+                                "<form class=\"tabelka\" action=\"usunTrumne.jsp\">" +
                                     "<input class=\"tabelka\" type=\"submit\" value=\"Usuń\">" +
                                     "<input class=\"ukryty\" type=\"text\" name=\"id\" value=\""+trumna.getId()+"\">" +
                                 "</form>" +
