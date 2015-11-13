@@ -27,13 +27,13 @@
 
 <jsp:useBean id="przechowajPogrzeby" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
              scope="application" />
-<jsp:useBean id="pom" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
+<jsp:useBean id="pomPobrzebu" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
 <jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
-<jsp:setProperty name="pom" property="id" />
+<jsp:setProperty name="pomPobrzebu" property="id" />
 
 <%
     for (Pogrzeb pomPogrz : przechowajPogrzeby.dajWszystkiePogrzeby()) {
-        if(pomPogrz.getId() == pom.getId()) {
+        if(pomPogrz.getId() == pomPobrzebu.getId()) {
             pogrzeb.setId(pomPogrz.getId());
             pogrzeb.setData(pomPogrz.getData());
             pogrzeb.setCena(pomPogrz.getCena());

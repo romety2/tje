@@ -37,7 +37,6 @@
             }
         }
         Trumna nowy = new Trumna(daneTrumny.getRodzaj(), daneTrumny.getCena(), daneTrumny.getIlosc());
-
         przechowajTrumny.edytujTrumne(trumna, nowy);
     %>
 
