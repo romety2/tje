@@ -18,8 +18,7 @@
         <h1>Zakład pogrzebowy</h1>
         <h2>Łukasz Mielewczyk</h2>
         <h3>kontakt: <a href="mailto:lmielewczyk@inf.ug.edu.pl">lmielewczyk@inf.ug.edu.pl</a></h3>
-        <p><a href="hello">Dzisiejsza data</a></p>
-        <p><a href="form">Moje hobby</a></p>
+        <p><a href="pytanie">Ankieta</a></p>
         <p><a href="wyswietlPogrzeby.jsp">Pogrzeby</a></p>
         <p><a href="wyswietlTrumny.jsp">Trumny</a></p>
     </body>
