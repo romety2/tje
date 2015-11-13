@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7bac8a3-1c6a-4ab5-b7dd-cfa59b5c3216" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/edytujPogrzeb.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/edytujPogrzeb.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/edytujTrumne.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/edytujTrumne.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/komunikatEdytujTrumne.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/komunikatEdytujTrumne.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="servletjspdemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SerwisPrzechowanychDanych.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SerwisPrzechowanychDanych.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.148148">
-              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.28894472">
+              <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -79,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edytujTrumne.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edytujTrumne.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/edytujTrumne.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4486215">
-              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -135,10 +131,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/usunTrumne.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/komunikatDodajTrumne.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/komunikatEdytujPogrzeb.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/komunikatEdytujTrumne.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/edytujPogrzeb.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/edytujTrumne.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java" />
       </list>
     </option>
   </component>
@@ -633,12 +629,12 @@
       <workItem from="1447237264230" duration="12923000" />
       <workItem from="1447254039303" duration="17586000" />
       <workItem from="1447284960620" duration="19184000" />
-      <workItem from="1447328167441" duration="32522000" />
+      <workItem from="1447328167441" duration="32756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100992000" />
+    <option name="totallyTimeSpent" value="101226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
@@ -1034,14 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.148148">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/komunikatEdytujPogrzeb.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.96153843">
@@ -1100,8 +1088,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/edytujTrumne.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4486215">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/servletjspdemo/service/SerwisPrzechowanychDanych.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28894472">
+          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
           <folding />
         </state>
       </provider>

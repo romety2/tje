@@ -40,12 +40,7 @@ public class SerwisPrzechowanychDanych {
 
 	public void edytujTrumne(Trumna staraTrumna, Trumna nowaTrumna){
 		int i = 0;
-		System.out.println("-----------------------------------------");
-		System.out.println("-----------------------------------------");
-		System.out.println("-----------------------------------------");
-		System.out.println("-----------------------------------------");
 		for (Trumna pomTrumn : dajWszystkieTrumny()) {
-			System.out.println("1."+staraTrumna.getId()+"2."+pomTrumn.getId());
 			if(pomTrumn.getId() == staraTrumna.getId())
 				break;
 			i++;
