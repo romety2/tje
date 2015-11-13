@@ -1,20 +1,20 @@
-<%@page import="com.example.servletjspdemo.domain.Trumna"%>
+<%@ page import="com.example.servletjspdemo.domain.Trumna"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
-<jsp:useBean id="pom" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
-<jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
-<jsp:setProperty name="pom" property="id" />
+<jsp:useBean id="pomTrumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
+<jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+<jsp:setProperty name="pomTrumna" property="id" />
 
 <%
     Trumna trumna = new Trumna();
-    for (Trumna pomTrumna : przechowaj.dajWszystkieTrumny()) {
-        if(pomTrumna.getId() == pom.getId()) {
-            trumna.setId(pomTrumna.getId());
+    for (Trumna pomTrum : przechowajTrumny.dajWszystkieTrumny()) {
+        if(pomTrumna.getId() == pomTrum.getId()) {
+            trumna.setId(pomTrum.getId());
             break;
         }
     }
-    przechowaj.usunTrumne(trumna);
+    przechowajTrumny.usunTrumne(trumna);
 %>
 
 <!DOCTYPE html>

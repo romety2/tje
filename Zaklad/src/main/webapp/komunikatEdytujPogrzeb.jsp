@@ -1,13 +1,16 @@
+<%--Zrodlo catch: http://www.tutorialspoint.com/jsp/jstl_core_catch_tag.htm--%>
+<%@ page import="com.example.servletjspdemo.domain.Pogrzeb"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
+<jsp:useBean id="danePogrzebu" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
 
 <c:catch var="wyjatek">
-    <jsp:setProperty name="pogrzeb" property="*" />
+
+    <jsp:setProperty name="danePogrzebu" property="*" />
     <%
-        String data = pogrzeb.getData();
+        String data = danePogrzebu.getData();
         int rok = Integer.parseInt(data.substring(0, 4));
         int miesiac = Integer.parseInt(data.substring(5, 7));
         int dzien = Integer.parseInt(data.substring(8));
@@ -44,15 +47,25 @@
             </style>
         </head>
         <body>
+            <jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
             <jsp:useBean id="przechowajPogrzeby" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
-            scope="application" />
+                         scope="application" />
 
             <%
-                przechowajPogrzeby.wstawPogrzeb(pogrzeb);
+                    for (Pogrzeb pomPogrz : przechowajPogrzeby.dajWszystkiePogrzeby()) {
+                        if (pomPogrz.getId() == danePogrzebu.getId()) {
+                            pogrzeb.setId(pomPogrz.getId());
+                            break;
+                        }
+                    }
+                    Pogrzeb nowy = new Pogrzeb(danePogrzebu.getData(), danePogrzebu.getCena(), danePogrzebu.getOpis());
+
+                przechowajPogrzeby.edytujPogrzeb(pogrzeb, nowy);
             %>
 
-            <p class="komunikat">Dodano: Data: ${pogrzeb.data},
-                Cena: <jsp:getProperty name="pogrzeb" property="cena"></jsp:getProperty>, Opis: ${pogrzeb.opis} </p>
+            <p class="komunikat">Edytowano na: Data: ${danePogrzebu.data},
+                Cena: <jsp:getProperty name="danePogrzebu" property="cena"></jsp:getProperty>,
+                Opis: ${danePogrzebu.opis} </p>
             <form action="wyswietlPogrzeby.jsp">
                 <p class="przycisk"><input type="submit" value=" Wróć "></p>
             </form>

@@ -27,6 +27,28 @@ public class SerwisPrzechowanychDanych {
 		idTrumny++;
 	}
 
+	public void edytujPogrzeb(Pogrzeb staryPogrzeb, Pogrzeb nowyPogrzeb){
+		int i = 0;
+		for (Pogrzeb pomPogrz : dajWszystkiePogrzeby()) {
+			if(pomPogrz.getId() == staryPogrzeb.getId())
+				break;
+			i++;
+		}
+		nowyPogrzeb.setId(staryPogrzeb.getId());
+		listaPogrzebow.set(i, nowyPogrzeb);
+	}
+
+	public void edytujTrumne(Trumna staraTrumna, Trumna nowaTrumna){
+		int i = 0;
+		for (Trumna pomTrumn : dajWszystkieTrumny()) {
+			if(pomTrumn.getId() == staraTrumna.getId())
+				break;
+			i++;
+		}
+		nowaTrumna.setId(staraTrumna.getId());
+		listaTrumien.set(i, nowaTrumna);
+	}
+
 	public void usunPogrzeb(Pogrzeb pogrzeb){
 		int i = 0;
 		for (Pogrzeb pomPogrz : dajWszystkiePogrzeby()) {
@@ -39,11 +61,11 @@ public class SerwisPrzechowanychDanych {
 
 	public void usunTrumne(Trumna trumna){
 		int i = 0;
-		for (Trumna pomTrumna : dajWszystkieTrumny()) {
-			if(pomTrumna.getId() == trumna.getId())
-				break;
-			i++;
-		}
+		for (Trumna pomTrumn : dajWszystkieTrumny()) {
+			if(pomTrumn.getId() == trumna.getId())
+			break;
+		i++;
+	}
 		listaTrumien.remove(i);
 	}
 

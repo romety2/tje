@@ -34,9 +34,9 @@
             <th></th>
         </tr>
 
-        <jsp:useBean id="przechowaj" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
+        <jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
         <%
-            for (Trumna trumna : przechowaj.dajWszystkieTrumny()) {
+            for (Trumna trumna : przechowajTrumny.dajWszystkieTrumny()) {
                 out.println("<tr>");
                 out.println("<td>" + trumna.getRodzaj()+"</td>");
                 out.println("<td>" + trumna.getCena()+"</td>");
