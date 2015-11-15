@@ -43,7 +43,7 @@
     }
 %>
 
-<form action="komunikatEdytujPogrzeb.jsp">
+<form action="komunikatEdytowanoPogrzeb.jsp">
 
     <p class="edytor">
         <label>Data: &nbsp;</label><input type="text" name="data" value=${pogrzeb.getData()} /><br />

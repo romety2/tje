@@ -22,7 +22,7 @@
 
     <h1>Dodaj pogrzeb</h1>
 
-    <form action="komunikatDodajPogrzeb.jsp">
+    <form action="walidacjaDodajPogrzeb">
 
       <p class="edytor">
           <label>Data: &nbsp;</label><input type="text" name="data" value="rrrr-mm-dd" /><br />
