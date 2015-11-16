@@ -21,7 +21,7 @@
     <p class="link"> <a href="wyswietlTrumny.jsp">Wróć</a> </p>
 
     <h1>Dodaj trumnę</h1>
-    <form action="komunikatDodanoTrumne.jsp">
+    <form action="walidacjaDodajTrumne">
           <p class="edytor">
               <label>Rodzaj: &nbsp;</label><input type="text" name="rodzaj" value="" /><br/>
               <label>Cena: &nbsp;&nbsp;&nbsp;</label><input type="text"  name="cena" value="0.0" /><br/>

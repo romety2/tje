@@ -3,19 +3,9 @@
     pageEncoding="UTF-8"%>
 
 <jsp:useBean id="pomPogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
+<jsp:useBean id="usunPogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
 <jsp:useBean id="przechowajPogrzeby" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 <jsp:setProperty name="pomPogrzeb" property="id" />
-
-<%
-    Pogrzeb pogrzeb = new Pogrzeb();
-    for (Pogrzeb pomPogrz : przechowajPogrzeby.dajWszystkiePogrzeby()) {
-        if(pomPogrz.getId() == pomPogrzeb.getId()) {
-            pogrzeb.setId(pomPogrz.getId());
-            break;
-        }
-    }
-    przechowajPogrzeby.usunPogrzeb(pogrzeb);
-%>
 
 <!DOCTYPE html>
 <html>
@@ -31,6 +21,16 @@
     </style>
 </head>
 <body>
+
+<%
+    for (Pogrzeb pomPogrz : przechowajPogrzeby.dajWszystkiePogrzeby()) {
+        if(pomPogrz.getId() == pomPogrzeb.getId()) {
+            usunPogrzeb.setId(pomPogrz.getId());
+            break;
+        }
+    }
+    przechowajPogrzeby.usunPogrzeb(usunPogrzeb);
+%>
 
     <h1>Usunięto!</h1>
 

@@ -15,7 +15,7 @@
 </head>
 <body>
 <p class="komunikat">Wprowadziłeś nieprawidłowo dane!!!</p>
-<form action="wyswietlPogrzeby.jsp">
+<form action="index.jsp">
     <p class="przycisk"><input type="submit" value=" Wróć "></p>
 </form>
 </body>

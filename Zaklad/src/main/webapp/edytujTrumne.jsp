@@ -42,7 +42,7 @@
     }
 %>
 
-<form action="komunikatEdytowanoTrumne.jsp">
+<form action="walidacjaEdytujTrumne">
     <p class="edytor">
         <label>Rodzaj: &nbsp;</label><input type="text" name="rodzaj" value=${trumna.getRodzaj()} /><br/>
         <label>Cena: &nbsp;&nbsp;&nbsp;</label><input type="text"  name="cena" value=${trumna.getCena()} /><br/>

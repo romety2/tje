@@ -3,19 +3,9 @@
          pageEncoding="UTF-8"%>
 
 <jsp:useBean id="pomTrumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
+<jsp:useBean id="usunTrumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
 <jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
 <jsp:setProperty name="pomTrumna" property="id" />
-
-<%
-    Trumna trumna = new Trumna();
-    for (Trumna pomTrum : przechowajTrumny.dajWszystkieTrumny()) {
-        if(pomTrumna.getId() == pomTrum.getId()) {
-            trumna.setId(pomTrum.getId());
-            break;
-        }
-    }
-    przechowajTrumny.usunTrumne(trumna);
-%>
 
 <!DOCTYPE html>
 <html>
@@ -31,6 +21,16 @@
     </style>
 </head>
 <body>
+
+<%
+    for (Trumna pomTrum : przechowajTrumny.dajWszystkieTrumny()) {
+        if(pomTrumna.getId() == pomTrum.getId()) {
+            usunTrumna.setId(pomTrum.getId());
+            break;
+        }
+    }
+    przechowajTrumny.usunTrumne(usunTrumna);
+%>
 
 <h1>Usunięto!</h1>
 
