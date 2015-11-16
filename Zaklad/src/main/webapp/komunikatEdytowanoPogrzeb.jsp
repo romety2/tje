@@ -1,4 +1,3 @@
-<%@ page import="com.example.servletjspdemo.domain.Pogrzeb"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -18,16 +17,14 @@
     </style>
 </head>
 <body>
-<jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
 <jsp:useBean id="przechowajPogrzeby" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
             scope="application" />
 
             <%
-                Pogrzeb nowy = new Pogrzeb(danePogrzebu.getData(), danePogrzebu.getCena(), danePogrzebu.getOpis());
-                przechowajPogrzeby.edytujPogrzeb(pogrzeb, nowy);
+                przechowajPogrzeby.edytujPogrzeb(danePogrzebu);
             %>
 
-        <p class="komunikat">Dodano: Data: ${danePogrzebu.data},
+        <p class="komunikat">Zmieniono na: Data: ${danePogrzebu.data},
             Cena: <jsp:getProperty name="danePogrzebu" property="cena"/>, Opis: ${danePogrzebu.opis} </p>
         <form action="wyswietlPogrzeby.jsp">
             <p class="przycisk"><input type="submit" value=" Wróć "></p>

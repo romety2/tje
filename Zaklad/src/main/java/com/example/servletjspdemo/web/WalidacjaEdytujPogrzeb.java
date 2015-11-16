@@ -22,6 +22,7 @@ public class WalidacjaEdytujPogrzeb extends HttpServlet {
             Pogrzeb pogrzeb = new Pogrzeb(request.getParameter("data"),
                     Double.parseDouble(request.getParameter("cena")), request.getParameter("opis"));
             String data = pogrzeb.getData();
+            pogrzeb.setId(Long.parseLong(request.getParameter("id")));
             int rok = Integer.parseInt(data.substring(0, 4));
             int miesiac = Integer.parseInt(data.substring(5, 7));
             int dzien = Integer.parseInt(data.substring(8));
@@ -38,7 +39,7 @@ public class WalidacjaEdytujPogrzeb extends HttpServlet {
 
             } else
                 throw new Exception();
-            request.setAttribute("pogrzeb", pogrzeb);
+            request.setAttribute("danePogrzebu", pogrzeb);
             request.getRequestDispatcher("komunikatEdytowanoPogrzeb.jsp").forward(request, response);
         }
         catch(Exception e)

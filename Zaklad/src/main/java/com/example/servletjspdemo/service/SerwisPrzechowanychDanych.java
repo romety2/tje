@@ -27,15 +27,14 @@ public class SerwisPrzechowanychDanych {
 		idTrumny++;
 	}
 
-	public void edytujPogrzeb(Pogrzeb staryPogrzeb, Pogrzeb nowyPogrzeb){
+	public void edytujPogrzeb(Pogrzeb pogrzeb){
 		int i = 0;
 		for (Pogrzeb pomPogrz : dajWszystkiePogrzeby()) {
-			if(pomPogrz.getId() == staryPogrzeb.getId())
+			if(pomPogrz.getId() == pogrzeb.getId())
 				break;
 			i++;
 		}
-		nowyPogrzeb.setId(staryPogrzeb.getId());
-		listaPogrzebow.set(i, nowyPogrzeb);
+		listaPogrzebow.set(i, pogrzeb);
 	}
 
 	public void edytujTrumne(Trumna staraTrumna, Trumna nowaTrumna){
