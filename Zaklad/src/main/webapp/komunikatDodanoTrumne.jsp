@@ -20,9 +20,7 @@
 <jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
              scope="application" />
 
-<%
-    przechowajTrumny.wstawTrumne(trumna);
-%>
+${przechowajTrumny.wstawTrumne(trumna)}
 
 <p class="komunikat">Dodano: Rodzaj: ${trumna.rodzaj},
     Cena: <jsp:getProperty name="trumna" property="cena"/>, Ilość: <jsp:getProperty name="trumna" property="ilosc"/> </p>

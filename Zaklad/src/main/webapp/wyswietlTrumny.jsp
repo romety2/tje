@@ -1,6 +1,6 @@
-<%@page import="com.example.servletjspdemo.domain.Trumna"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,26 +34,25 @@
             <th></th>
         </tr>
 
-        <jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych" scope="application" />
-        <%
-            for (Trumna trumna : przechowajTrumny.dajWszystkieTrumny()) {
-                out.println("<tr>");
-                out.println("<td>" + trumna.getRodzaj()+"</td>");
-                out.println("<td>" + trumna.getCena()+"</td>");
-                out.println("<td>" + trumna.getIlosc()+"</td>");
-                out.println("<td>" +
-                                "<form class=\"tabelka\" action=\"edytujTrumne.jsp\">" +
-                                    "<input class=\"tabelka\" type=\"submit\" value=\"Edytuj\">" +
-                                    "<input class=\"ukryty\" type=\"text\" name=\"id\" value=\""+trumna.getId()+"\">" +
-                                "</form>" +
-                                "<form class=\"tabelka\" action=\"usunTrumne.jsp\">" +
-                                    "<input class=\"tabelka\" type=\"submit\" value=\"Usuń\">" +
-                                    "<input class=\"ukryty\" type=\"text\" name=\"id\" value=\""+trumna.getId()+"\">" +
-                                "</form>" +
-                            "</td>");
-                out.println("</tr>");
-            }
-        %>
+        <jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
+                     scope="application" />
+        <c:forEach var="trumna" items="${przechowajTrumny.dajWszystkieTrumny()}">
+                <tr>
+                    <td>${trumna.rodzaj}</td>
+                    <td>${trumna.cena}</td>
+                    <td>${trumna.ilosc}</td>
+                    <td>
+                        <form class="tabelka" action="edytujTrumne.jsp">
+                            <input class="tabelka" type="submit" value="Edytuj">
+                            <input class="ukryty" type="text" name="id" value=${trumna.id}>
+                        </form>
+                        <form class="tabelka" action="usunTrumne.jsp">
+                            <input class="tabelka" type="submit" value="Usuń">
+                            <input class="ukryty" type="text" name="id" value=${trumna.id}>
+                        </form>
+                    </td>
+               </tr>
+        </c:forEach>
     </table>
 
     <form action="dodajTrumne.jsp">

@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Dodano pogrzeb</title>
+    <title>Edytowano pogrzeb</title>
     <style rel="stylesheet" type="text/css">
         body 	{background: url('czaszki.jpg')}
         p 	    {text-align: center}
@@ -20,9 +20,7 @@
 <jsp:useBean id="przechowajPogrzeby" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
             scope="application" />
 
-            <%
-                przechowajPogrzeby.edytujPogrzeb(danePogrzebu);
-            %>
+        ${przechowajPogrzeby.edytujPogrzeb(danePogrzebu)}
 
         <p class="komunikat">Zmieniono na: Data: ${danePogrzebu.data},
             Cena: <jsp:getProperty name="danePogrzebu" property="cena"/>, Opis: ${danePogrzebu.opis} </p>

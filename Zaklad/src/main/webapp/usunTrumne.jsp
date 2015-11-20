@@ -1,6 +1,6 @@
-<%@ page import="com.example.servletjspdemo.domain.Trumna"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <jsp:useBean id="pomTrumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
 <jsp:useBean id="usunTrumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
@@ -22,15 +22,12 @@
 </head>
 <body>
 
-<%
-    for (Trumna pomTrum : przechowajTrumny.dajWszystkieTrumny()) {
-        if(pomTrumna.getId() == pomTrum.getId()) {
-            usunTrumna.setId(pomTrum.getId());
-            break;
-        }
-    }
-    przechowajTrumny.usunTrumne(usunTrumna);
-%>
+<c:forEach var="pomTrumn" items="${przechowajTrumny.dajWszystkieTrumny()}">
+    <c:if test="${pomTrumn.getId() eq pomTrumna.getId()}">
+        ${usunTrumna.setId(pomTrumn.getId())}
+    </c:if>
+</c:forEach>
+${przechowajTrumny.usunTrumne(usunTrumna)}
 
 <h1>Usunięto!</h1>
 

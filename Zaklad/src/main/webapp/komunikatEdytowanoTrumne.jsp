@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Dodano trumnę</title>
+    <title>Edytowano trumnę</title>
     <style rel="stylesheet" type="text/css">
         body 	{background: url('czaszki.jpg')}
         p 	    {text-align: center}
@@ -20,13 +20,11 @@
 <jsp:useBean id="przechowajTrumny" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
              scope="application" />
 
-<%
-    przechowajTrumny.edytujTrumne(daneTrumny);
-%>
+${przechowajTrumny.edytujTrumne(daneTrumny)}
 
-<p class="komunikat">Zmieniono na: Rodzaj: ${trumna.rodzaj},
-    Cena: <jsp:getProperty name="trumna" property="cena"/>,
-    Ilość: <jsp:getProperty name="trumna" property="ilosc"/>} </p>
+<p class="komunikat">Zmieniono na: Rodzaj: ${daneTrumny.rodzaj},
+    Cena: <jsp:getProperty name="daneTrumny" property="cena"/>,
+    Ilość: <jsp:getProperty name="daneTrumny" property="ilosc"/></p>
 <form action="wyswietlTrumny.jsp">
     <p class="przycisk"><input type="submit" value=" Wróć "></p>
 </form>

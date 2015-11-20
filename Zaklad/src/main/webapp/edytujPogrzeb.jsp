@@ -1,6 +1,6 @@
-<%@page import="com.example.servletjspdemo.domain.Pogrzeb"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -27,24 +27,20 @@
 
 <jsp:useBean id="przechowajPogrzeby" class="com.example.servletjspdemo.service.SerwisPrzechowanychDanych"
              scope="application" />
-<jsp:useBean id="pomPobrzebu" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
+<jsp:useBean id="pomPogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
 <jsp:useBean id="pogrzeb" class="com.example.servletjspdemo.domain.Pogrzeb" scope="session" />
-<jsp:setProperty name="pomPobrzebu" property="id" />
+<jsp:setProperty name="pomPogrzeb" property="id" />
 
-<%
-    for (Pogrzeb pomPogrz : przechowajPogrzeby.dajWszystkiePogrzeby()) {
-        if(pomPogrz.getId() == pomPobrzebu.getId()) {
-            pogrzeb.setId(pomPogrz.getId());
-            pogrzeb.setData(pomPogrz.getData());
-            pogrzeb.setCena(pomPogrz.getCena());
-            pogrzeb.setOpis(pomPogrz.getOpis());
-            break;
-        }
-    }
-%>
+<c:forEach var="pomPogrz" items="${przechowajPogrzeby.dajWszystkiePogrzeby()}">
+    <c:if test="${pomPogrz.getId() eq pomPogrzeb.getId()}">
+        ${pogrzeb.setId(pomPogrz.getId())}
+        ${pogrzeb.setData(pomPogrz.getData())}
+        ${pogrzeb.setCena(pomPogrz.getCena())}
+        ${pogrzeb.setOpis(pomPogrz.getOpis())}
+    </c:if>
+</c:forEach>
 
 <form action="walidacjaEdytujPogrzeb">
-
     <p class="edytor">
         <label>Data: &nbsp;</label><input type="text" name="data" value=${pogrzeb.getData()} /><br />
         <label>Cena: </label><input type="text" name="cena" value=${pogrzeb.getCena()}  /><br />
@@ -52,7 +48,6 @@
     </p>
     <p class="przycisk"><input type="submit" value=" OK "></p>
     <p class="ukryty"><input type="text" name="id" value=${pogrzeb.getId()} /></p>
-
 </form>
 
 </body>

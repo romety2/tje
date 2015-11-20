@@ -1,6 +1,7 @@
-<%@page import="com.example.servletjspdemo.domain.Trumna"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,17 +31,14 @@
 <jsp:useBean id="trumna" class="com.example.servletjspdemo.domain.Trumna" scope="session" />
 <jsp:setProperty name="pomTrumny" property="id" />
 
-<%
-    for (Trumna pomTrumn : przechowajTrumny.dajWszystkieTrumny()) {
-        if(pomTrumn.getId() == pomTrumny.getId()) {
-            trumna.setId(pomTrumn .getId());
-            trumna.setRodzaj(pomTrumn.getRodzaj());
-            trumna.setCena(pomTrumn.getCena());
-            trumna.setIlosc(pomTrumn.getIlosc());
-            break;
-        }
-    }
-%>
+<c:forEach var="pomTrumn" items="${przechowajTrumny.dajWszystkieTrumny()}">
+    <c:if test="${pomTrumn.getId() eq pomTrumny.getId()}">
+        ${trumna.setId(pomTrumn .getId())}
+        ${trumna.setRodzaj(pomTrumn.getRodzaj())}
+        ${trumna.setCena(pomTrumn.getCena())}
+        ${trumna.setIlosc(pomTrumn.getIlosc())}
+    </c:if>
+</c:forEach>
 
 <form action="walidacjaEdytujTrumne">
     <p class="edytor">

@@ -36,7 +36,7 @@ public class Pytanie extends HttpServlet {
 				"</head>"+
 				"<body>"+
 				"<p class=\"link\"> <a href=\"index.jsp\">Strona glowna</a> </p>"+
-				"<h1>Jaki czynnik najbardziej wplywa na jakosc zakladu pogrzebowego</h1>" +
+				"<h1>Ktory czynnik najbardziej wplywa na jakosc zakladu pogrzebowego</h1>" +
 				"<form action='odpowiedzi'>" +
 				"<p class=\"radio\"><input type='radio' name='zaklad' value='trumna'>Trumny<br />" +
 				"<input type='radio' name='zaklad' value='wieniec'>Wience<br />" +

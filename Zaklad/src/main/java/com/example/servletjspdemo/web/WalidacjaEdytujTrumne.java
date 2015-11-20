@@ -21,6 +21,7 @@ public class WalidacjaEdytujTrumne extends HttpServlet {
         {
             Trumna trumna = new Trumna(request.getParameter("rodzaj"),
                     Double.parseDouble(request.getParameter("cena")), Integer.parseInt(request.getParameter("ilosc")));
+            trumna.setId(Long.parseLong(request.getParameter("id")));
             request.setAttribute("daneTrumny", trumna);
             request.getRequestDispatcher("komunikatEdytowanoTrumne.jsp").forward(request, response);
         }

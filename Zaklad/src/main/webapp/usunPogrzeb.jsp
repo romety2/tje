@@ -1,4 +1,3 @@
-<%@page import="com.example.servletjspdemo.domain.Pogrzeb"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -22,15 +21,12 @@
 </head>
 <body>
 
-<%
-    for (Pogrzeb pomPogrz : przechowajPogrzeby.dajWszystkiePogrzeby()) {
-        if(pomPogrz.getId() == pomPogrzeb.getId()) {
-            usunPogrzeb.setId(pomPogrz.getId());
-            break;
-        }
-    }
-    przechowajPogrzeby.usunPogrzeb(usunPogrzeb);
-%>
+<c:forEach var="pomPogrz" items="${przechowajPogrzeby.dajWszystkiePogrzeby()}">
+    <c:if test="${pomPogrz.getId() eq pomPogrzeb.getId()}">
+        ${usunPogrzeb.setId(pomPogrz.getId())}
+    </c:if>
+</c:forEach>
+${przechowajPogrzeby.usunPogrzeb(usunPogrzeb)}
 
     <h1>Usunięto!</h1>
 
